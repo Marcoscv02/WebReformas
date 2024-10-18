@@ -1,0 +1,43 @@
+
+.carousel-inner {
+    max-height: 400px; /* Set your desired max height */
+    overflow: hidden; /* Hide overflow if images exceed max height */
+}
+
+.carousel-item {
+    max-height: 400px; /* Match this with the max height */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Center images vertically */
+    justify-content: center; /* Center images horizontally */
+}
+.carousel-item:hover{
+    background-color: rgba(19, 128, 128, 0.9);
+    display: block;
+}
+.carousel-item img {
+    
+    height: auto;
+    object-fit: cover;
+    
+}
+.carousel-caption {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    
+}
+.carousel-caption h5, 
+.carousel-caption p {
+    color: rgb(0, 6, 65); 
+}
+
+.carousel-item:hover .carousel-caption {
+    opacity: 1;
+    visibility: visible;
+    background-color: rgba(255, 255, 255, 0.575);  
+    border-radius: 10px;  
+}
+
+.carousel-item:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,52 @@
+.footer_a{
+    background-color: black;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+}
+.footer_a:hover{
+    background-color: blueviolet;
+}
+#footerIconos{
+    display: flex;
+    justify-content: center;
+}
+#footer{
+    background-color: #18576C;
+}
+#facebookImg{
+    width: 30px;
+    height: 30px;
+
+}
+#instagramImg{
+    width: 20px;
+    height: 20px;
+
+}
+#telegramImg{
+    width: 20px;
+    height: 20px;
+
+}
+#footerBloquesIzquierda{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-right-style: solid;
+    border-right-color: aliceblue;
+    margin-left: 300px;
+    
+}
+#footerBloques{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+}
+#footerBloqueDereita{
+    margin: auto;
+}
