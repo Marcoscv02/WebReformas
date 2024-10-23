@@ -19,3 +19,7 @@ https://marcoscv02.github.io/WebReformas/
     - Esta esta moi guai, permite facer animacions e copiar o código directamente      
 - https://codepen.io/chriscoyier/pen/EBLZVG
   - Proporciona unha interfaz grafica e o código html, css e javaScript para que funcionen as animacions
+- https://michalsnik.github.io/aos/
+  - Librería para realizar scroll animados, no fondo da página tedes o enlace `para implementala a css
+- https://css-loaders.com/wobbling/
+  -Podense copiar e pegar fragmentos de código para animacions de carga
