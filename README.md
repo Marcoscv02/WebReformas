@@ -23,3 +23,5 @@ https://marcoscv02.github.io/WebReformas/
   - Librería para realizar scroll animados, no fondo da página tedes o enlace `para implementala a css
 - https://css-loaders.com/wobbling/
   - Podense copiar e pegar fragmentos de código para animacions de carga
+- https://www.transition.style/#out:wipe:down
+  - Animacions para transicions en css solo hai que copiar o código e listo
