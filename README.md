@@ -22,4 +22,4 @@ https://marcoscv02.github.io/WebReformas/
 - https://michalsnik.github.io/aos/
   - Librería para realizar scroll animados, no fondo da página tedes o enlace `para implementala a css
 - https://css-loaders.com/wobbling/
-  -Podense copiar e pegar fragmentos de código para animacions de carga
+  - Podense copiar e pegar fragmentos de código para animacions de carga
