@@ -4,8 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/styleHeader.css">
+    <link rel="stylesheet" href="css/styleFooter.css">
 </head>
 <body>
-    
+    <header>
+        <div class="header-logo"><a href="#"><img src="img/imgHeader/logo-transparencia-recortado.png" height="100px"></a></div>
+        
+        <div class="hamburguesa" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <div class="header-menu">
+            <ul>
+                <li><a href="#">Electricidad</a></li>
+                <li><a href="#">Fontanería</a></li>
+                <li><a href="#">Gas</a></li>
+                <li><a href="#">Domótica</a></li>
+            </ul>
+        </div>
+
+        <div class="header-btn-contacto">Contacto</div>
+
+        <div class="menu-hamburguesa" id="hamburguesa" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-desplegable" id="menuDesplegable">
+            <a href="#home">Electricidad</a>
+            <a href="#productos">Fontanería</a>
+            <a href="#historia">Gas</a>
+            <a href="#historia">Domótica</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+
+    </header>
+
+
+
+
+
+
+
+    <main>
+        <p>Contenido principal de la página.</p>
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ACERCA DE NOSOTROS</h4>
+                <ul>
+                    <li><a href="#">Somos "Empresa" </a></li>
+                    <li><a href="#">Afiliación</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>NUESTRA PROMOCIÓN</h4>
+                <ul>
+                    <li><a href="#">Tarjetas regalo</a></li>
+                    <li><a href="#">Código promocional</a></li>
+                    <li><a href="#">Apadrinamiento</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>AYUDA Y CONSEJOS</h4>
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Guías de compra</a></li>
+                    <li><a href="#">Seguimiento de mi pedido</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>CONDICIONES DE VENTA</h4>
+                <ul>
+                    <li><a href="#">CGV</a></li>
+                    <li><a href="#">Condiciones legales</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                </ul>
+            </div>
+
+
+            <div id="pagosSeguros">
+                <h4>PAGOS SEGUROS</h4>
+                <div class="payment-icons">
+                    <img src="img/imgFooter/visa-logo.jpg" id="footerVisa" alt="Visa">
+                    <img src="img/imgFooter/mastercard-logo.png" id="footerMastercard" alt="MasterCard">
+                    <img src="img/imgFooter/paypal-logo.jpg" id="footerPaypal" alt="PayPal">
+                    <img src="img/imgFooter/applepay-logo.svg" id="footerApplepay" alt="Apple Pay">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="logo-section">
+                <img src="" alt="Logo">
+            </div>
+        </div>
+        <div id="footerIconos">
+            <a href="http://facebook.com" id="facebook" class="footer_a">
+                <img class="footerIconoImg" id="facebookImg" src="img/imgFooter/facebook-logo.png" alt="facebook">
+            </a>
+            <a href="http://instagram.com" id="instagram" class="footer_a">
+                <img class="footerIconoImg" id="instagramImg" src="img/imgFooter/instagram-logo.svg" alt="instagram">
+            </a>
+            <a href="http://telegram.com" id="telegram" class="footer_a">
+                <img class="footerIconoImg" id="telegramImg" src="img/imgFooter/telegram-logo.svg" alt="telegram">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
+
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById("menuDesplegable");
+        // Cambiar entre mostrar y ocultar el menú desplegable
+        if (menu.style.display === "none" || menu.style.display === "") {
+            menu.style.display = "flex";
+        } else {
+            menu.style.display = "none";
+        }
+    }
+
+    // Asegurarse de que el menú esté oculto inicialmente
+    document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("menuDesplegable").style.display = "none";
+    });
+</script>
