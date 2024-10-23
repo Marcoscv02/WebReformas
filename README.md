@@ -25,3 +25,6 @@ https://marcoscv02.github.io/WebReformas/
   - Podense copiar e pegar fragmentos de código para animacions de carga
 - https://www.transition.style/#out:wipe:down
   - Animacions para transicions en css solo hai que copiar o código e listo
+- https://uiverse.io/
+  - Existen un monton de elementos que permiten copiar e pegar ocodigo css
+  
