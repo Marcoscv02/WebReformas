@@ -41,3 +41,19 @@
 .carousel-control-next:hover .carousel-control-next-icon {
   transform: scale(1.1)
 }
+
+/* Preguntas */
+
+.preguntas {
+  width: 100%;
+  background-color: red;
+  height: 600px;
+
+}
+.preguntas #accordionPanelsStayOpenExample{
+  margin: 5%;
+  width: 50%;
+  float: left;
+  
+}
+
