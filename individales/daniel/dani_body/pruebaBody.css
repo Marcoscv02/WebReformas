@@ -46,9 +46,6 @@
 
 .preguntas {
   width: 100%;
-  background-color: red;
-  height: 600px;
-
 }
 .preguntas #accordionPanelsStayOpenExample{
   margin: 5%;
