@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="css/styleHeader.css">
     <link rel="stylesheet" href="css/styleFooter.css">
     <link rel="stylesheet" href="css/styleBody.css">
+    <link rel="stylesheet" href="css/styleFormContacto.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
     <header>
-        <div class="header-logo"><a href="#"><img src="img/imgHeader/logo-recortado.png"
-                    height="80px"></a></div>
+        <div class="header-logo"><a href="#"><img src="img/imgHeader/logo-recortado.png" height="80px"></a></div>
 
         <div class="hamburguesa" onclick="toggleMenu()">
             <div></div>
@@ -32,7 +32,7 @@
             </ul>
         </div>
 
-        <div class="header-btn-contacto">Contacto</div>
+        <div class="header-btn-contacto" onclick="openModal()">Contacto</div>
 
         <div class="menu-hamburguesa" id="hamburguesa" onclick="toggleMenu()">
             <span></span>
@@ -44,18 +44,82 @@
             <a href="#productos">Fontanería</a>
             <a href="#historia">Gas</a>
             <a href="#historia">Domótica</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#" onclick="openModal()">Contacto</a>
         </div>
 
     </header>
 
+    <div class="modalGrande" id="reservationModal">
+        <div class="modal-content-todo">
+            <div id="formulario">
+                <button class="close-btn" onclick="closeModal()">×</button>
 
+                <h2>Hablanos</h2>
+                <form id="reservationForm">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+
+
+
+                    <label for="date">Fecha:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="people">Concepto:</label>
+
+                    <textarea name="" id="" cols="60" rows="20" style="resize: none; width: 100%; padding: 8px;"
+                        required></textarea>
+
+                    <button id="reserva-btn" type="submit"> Enviar</button>
+                </form>
+            </div>
+
+            <hr>
+
+            <div class="contact-container">
+                <p>In tempus nisi turpis, at ultricies dui eleifend a. Quisque et quam vel nunc consectetur pharetra
+                    euismod et elit. Morbi nibh tortor, ullamcorper id purus eu, rhoncus consequat velit.</p>
+
+                <div class="contact-item">
+                    <div>
+                        <i class="fa-phone"></i>
+                        <p><strong>Phone Number</strong><br>+6282 4032 567</p>
+                    </div>
+                    <div>
+                        <i class="fa-envelope"></i>
+                        <p><strong>Email Address</strong><br>Example@Email.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div>
+                        <i class="fa-whatsapp"></i>
+                        <p><strong>Whatsapp</strong><br>082-245-7253</p>
+                    </div>
+                    <div>
+                        <i class="fa-map-marker-alt"></i>
+                        <p><strong>Our Office</strong><br>2443 Oak Ridge Omaha, OA 45065</p>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <iframe
+                        src="https://maps.google.com/maps?q=london%20eye&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
 
 
     <main>
+
+
+
+
+
+
         <div class="container d-flex justify-center align-center">
             <div id="carouselMainPage" class="carousel slide w-100 m-5 mx-auto" data-bs-ride="carousel">
                 <div class="carousel-indicators d-none">
@@ -121,7 +185,154 @@
                 </button>
             </div>
         </div>
-        
+
+        <!-- ACCORDION PREGUNTAS -->
+        <div class="container w-100 preguntas">
+            <h1 class="text-center">Preguntas Frecuentes</h1>
+            <div class="accordion" id="accordionExample">
+                <!-- Pregunta 1 -->
+                <div class="accordion-item rounded-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button rounded-3" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Accordion Item #1
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the
+                            collapse
+                            plugin adds the appropriate classes that we use to style each element. These classes control
+                            the
+                            overall appearance, as well as the showing and hiding via CSS transitions. You can modify
+                            any of
+                            this with custom CSS or overriding our default variables. It's also worth noting that just
+                            about any
+                            HTML can go within the <code>.accordion-body</code>, though the transition does limit
+                            overflow.
+                        </div>
+                    </div>
+                </div>
+                <!-- Pregunta 2 -->
+                <div class="accordion-item  my-4 rounded-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button rounded-3 collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Accordion Item #2
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until
+                            the
+                            collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes
+                            control the overall appearance, as well as the showing and hiding via CSS transitions. You
+                            can
+                            modify any of this with custom CSS or overriding our default variables. It's also worth
+                            noting that
+                            just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                            does limit
+                            overflow.
+                        </div>
+                    </div>
+                </div>
+                <!-- Pregunta 3 -->
+                <div class="accordion-item  my-4 rounded-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button rounded-3 collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Accordion Item #3
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                            collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes
+                            control the overall appearance, as well as the showing and hiding via CSS transitions. You
+                            can
+                            modify any of this with custom CSS or overriding our default variables. It's also worth
+                            noting that
+                            just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                            does limit
+                            overflow.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="accordion-item my-4 rounded-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button rounded-3 collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Accordion Item #4
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the fourth item's accordion body.</strong> It is hidden by default, until
+                            the
+                            collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes
+                            control the overall appearance, as well as the showing and hiding via CSS transitions. You
+                            can
+                            modify any of this with custom CSS or overriding our default variables. It's also worth
+                            noting that
+                            just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                            does limit
+                            overflow.
+                        </div>
+                    </div>
+                </div>
+                <!-- Pregunta 5 -->
+                <div class="accordion-item my-4 rounded-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button rounded-3 collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Accordion Item #5
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the fifth item's accordion body.</strong> It is hidden by default, until the
+                            collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes
+                            control the overall appearance, as well as the showing and hiding via CSS transitions. You
+                            can
+                            modify any of this with custom CSS or overriding our default variables. It's also worth
+                            noting that
+                            just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                            does limit
+                            overflow.
+                        </div>
+                    </div>
+                </div>
+                <!-- Pregunta 6 -->
+                <div class="accordion-item my-4 rounded-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button rounded-3 collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Accordion Item #6
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the sixth item's accordion body.</strong> It is hidden by default, until the
+                            collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes
+                            control the overall appearance, as well as the showing and hiding via CSS transitions. You
+                            can
+                            modify any of this with custom CSS or overriding our default variables. It's also worth
+                            noting that
+                            just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                            does limit
+                            overflow.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
 
@@ -210,7 +421,7 @@
     function toggleMenu() {
         const menu = document.getElementById("menuDesplegable");
         const hamburguesa = document.querySelector(".hamburguesa");
-    
+
         // Cambiar entre mostrar y ocultar el menú desplegable
         if (menu.style.display === "none" || menu.style.display === "") {
             menu.style.display = "flex";
@@ -220,12 +431,21 @@
             hamburguesa.classList.remove("open");  // Quita la clase 'open' para volver a hamburguesa
         }
     }
-    
+
     // Asegurarse de que el menú esté oculto inicialmente
     document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("menuDesplegable").style.display = "none";
     });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+
+<script>function openModal() {
+        document.getElementById('reservationModal').style.display = 'flex';
+    }
+
+    // Función para cerrar el modal
+    function closeModal() {
+        document.getElementById('reservationModal').style.display = 'none';
+    }</script>

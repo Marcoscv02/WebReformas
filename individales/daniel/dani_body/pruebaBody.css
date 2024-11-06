@@ -42,15 +42,42 @@
   transform: scale(1.1)
 }
 
-/* Preguntas */
 
-.preguntas {
-  width: 100%;
-}
-.preguntas #accordionPanelsStayOpenExample{
-  margin: 5%;
-  width: 50%;
-  float: left;
+/* Accordion */
+
+.accordion {
+  --bs-accordion-active-bg: #ffffff;
+  --bs-accordion-active-color: #000000;
+  --bs-accordion-btn-focus-box-shadow: none;
   
 }
 
+.accordion .accordion-item:has(.accordion-button:not(.collapsed)) {
+  border: 1px solid black;
+  box-shadow: 4px 4px  #000000;
+  
+}
+
+.accordion-button.collapsed {
+  border: 1px solid #d8d8d8;
+  
+}
+.accordion-button:not(.collapsed){
+  box-shadow: none!important;
+}
+.accordion-button{
+  --bs-accordion-active-bg: white;
+}
+
+.accordion-collapse {
+  transition: all 0.3s;
+}
+.accordion-button:focus {
+  outline: none;
+  box-shadow:none!important;
+  /* border: 1px solid #d8d8d8; */
+}
+.accordion-body{
+  background-color: #e3f3ff;
+  border-radius: 5px;
+}
