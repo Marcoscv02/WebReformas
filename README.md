@@ -21,4 +21,7 @@ https://marcoscv02.github.io/WebReformas/
   - Animacions para transicions en css solo hai que copiar o código e listo
 - https://uiverse.io/
   - Existen un monton de elementos que permiten copiar e pegar ocodigo css
+
+### Paleta de colores:
+![Paleta colores](https://github.com/Marcoscv02/WebReformas/blob/main/individales/marcos/Paleta%20de%20colores.png)
   
