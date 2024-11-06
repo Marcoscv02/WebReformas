@@ -6,13 +6,14 @@ formulario de contacto orientado a contacto con cliente(email, móvil) a través
 diseño blanco e azul
 
 - preguntas:
+	+Nombe empresa: RenovArt
 	+Número de teléfono
 	+Logo
-	+Permite registro de clientes
+	x--> Permitese registro de clientes.
 	+Hai redes sociales
 	+Permítese contacto por whatsapp(Logo en blanco y negro y se pone a color cuando se hoveree)
-	+¿se incluye seccion de idiomas?(Como profesionales no recomendamos la insercion de este elemento debido al tipo de empresa)
+	x--> ¿se incluye seccion de idiomas?(Como profesionales no recomendamos la insercion de este elemento debido al tipo de empresa)
 	+¿Que servicios se ofrecen?
 	+Desea incorporacion de preguntas frecuentes, en caso afirmativo decir que preguntas
-	+Incluye newsletter (para ofertas, novedades del sector...)
+	x--> Incluye newsletter (para ofertas, novedades del sector...)
 	+Perfil de cliente promedio
