@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styleFormContacto.css">
+</head>
+
+<body>
+    <main>
+        <div class="modal" id="reservationModal">
+            <div class="modal-content">
+                <div id="formulario">
+                    <h2>Hablanos</h2>
+                    <form id="reservationForm">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+
+
+
+                        <label for="date">Fecha:</label>
+                        <input type="date" id="date" name="date" required>
+
+                        <label for="people">Concepto:</label>
+
+                        <textarea name="" id="" cols="60" rows="20" style="resize: none; width: 100%; padding: 8px;"
+                            required></textarea>
+
+                        <button id="reserva-btn" type="submit"> Enviar</button>
+                    </form>
+                </div>
+
+                <hr>
+                <div class="contact-container">
+                    <p>In tempus nisi turpis, at ultricies dui eleifend a. Quisque et quam vel nunc consectetur pharetra
+                        euismod et elit. Morbi nibh tortor, ullamcorper id purus eu, rhoncus consequat velit.</p>
+
+                    <div class="contact-item">
+                        <div>
+                            <i class="fa-phone"></i>
+                            <p><strong>Phone Number</strong><br>+6282 4032 567</p>
+                        </div>
+                        <div>
+                            <i class="fa-envelope"></i>
+                            <p><strong>Email Address</strong><br>Example@Email.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div>
+                            <i class="fa-whatsapp"></i>
+                            <p><strong>Whatsapp</strong><br>082-245-7253</p>
+                        </div>
+                        <div>
+                            <i class="fa-map-marker-alt"></i>
+                            <p><strong>Our Office</strong><br>2443 Oak Ridge Omaha, OA 45065</p>
+                        </div>
+                    </div>
+
+                    <div class="map-container">
+                        <iframe
+                            src="https://maps.google.com/maps?q=london%20eye&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
+
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById("menuDesplegable");
+        const hamburguesa = document.querySelector(".hamburguesa");
+
+        // Cambiar entre mostrar y ocultar el menú desplegable
+        if (menu.style.display === "none" || menu.style.display === "") {
+            menu.style.display = "flex";
+            hamburguesa.classList.add("open");  // Añade la clase 'open' para cambiar a 'X'
+        } else {
+            menu.style.display = "none";
+            hamburguesa.classList.remove("open");  // Quita la clase 'open' para volver a hamburguesa
+        }
+    }
+
+    // Asegurarse de que el menú esté oculto inicialmente
+    document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("menuDesplegable").style.display = "none";
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
