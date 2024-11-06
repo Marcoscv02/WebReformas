@@ -1,11 +1,12 @@
-body{
+body {
   position: relative;
 }
+
 .modalGrande {
   display: none;
   /* Inicialmente oculto */
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgb(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
@@ -89,12 +90,13 @@ body{
   color: #F0D290;
 }
 
-hr{
+hr {
   margin-left: 100px;
   margin-right: 100px;
   width: 2px;
   background-color: #000;
 }
+
 .contact-container {
   padding: 8px;
   display: flex;
@@ -143,8 +145,8 @@ hr{
 
 .map-container iframe {
   width: 100%;
-  max-width: 500px;
-  height: 250px;
+  width: 500px;
+  height: 300px;
   border: none;
 }
 
