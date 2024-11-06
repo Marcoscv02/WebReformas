@@ -1,13 +1,11 @@
 # WebReformas
 
-En esta página se subira toda la documentacion del proyecto
-### Tareas Actuales:
-- xacobo: Footer
-- Daniel body/implementacion de bootstrap
-- Ignacio: Header
-- Marcos:Logo
+### En esta página se subira toda la documentacion del proyecto
+
 
 https://marcoscv02.github.io/WebReformas/
+
+---
 
 ### Webs para generar animaciones en css
     
@@ -21,6 +19,8 @@ https://marcoscv02.github.io/WebReformas/
   - Animacions para transicions en css solo hai que copiar o código e listo
 - https://uiverse.io/
   - Existen un monton de elementos que permiten copiar e pegar ocodigo css
+    
+---
 
 ### Paleta de colores:
 ![Paleta colores](https://github.com/Marcoscv02/WebReformas/blob/main/individales/marcos/Paleta%20de%20colores.png)
