@@ -6,12 +6,12 @@ formulario de contacto orientado a contacto con cliente(email, móvil) a través
 diseño blanco e azul
 
 - preguntas:
-	+Nombe empresa: RenovArt
+	+Nombe empresa: Homeserve
 	+Número de teléfono
 	+Logo
 	x--> Permitese registro de clientes.
 	+Hai redes sociales
-	+Permítese contacto por whatsapp(Logo en blanco y negro y se pone a color cuando se hoveree)
+	+Permítese contacto por whatsapp  (Logo en blanco y negro y se pone a color cuando se hoveree)
 	x--> ¿se incluye seccion de idiomas?(Como profesionales no recomendamos la insercion de este elemento debido al tipo de empresa)
 	+¿Que servicios se ofrecen?
 	+Desea incorporacion de preguntas frecuentes, en caso afirmativo decir que preguntas
