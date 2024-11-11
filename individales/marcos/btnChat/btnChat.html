@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="btnChat.css">
+    <title>Chat WhatsApp</title>
+</head>
+<body>
+
+    <!-- Botón de Chat -->
+    <div id="chat-button" onclick="toggleChat()">
+        <img src="img/btnChat.png" alt="Chat Icon">
+        <span class="notification-dot"></span>
+    </div>
+
+    <!-- Ventana de Chat -->
+    <div id="chat-popup">
+        <div class="chat-header">
+            <span>Homeserve</span>
+            <span>Horario: 8:00 a 16:00 h.</span>
+            <button onclick="toggleChat()">X</button>
+        </div>
+        <div class="chat-body">
+            <p>Hola!<br>¿En qué podemos ayudarte?</p>
+            <span class="chat-time">9:46</span>
+        </div>
+        <div class="chat-actions">
+            <button class="chat-btn chat-start">Empezar chat</button>
+            <button class="chat-btn chat-reserve">Reservar cita</button>
+        </div>
+    </div>
+
+    <script src="btnChat.js"></script>
+</body>
+</html>
