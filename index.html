@@ -52,21 +52,24 @@
     <div class="modalGrande" id="reservationModal">
         <div class="modal-content-todo">
             <div id="formulario">
-                <button class="close-btn" onclick="closeModal()">×</button>
+                <button class="close-btn" onclick="closeModal()">X</button>
 
                 <h2>Hablanos</h2>
                 <form id="reservationForm">
                     <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" placeholder="Nombre y apellidos" required>
 
 
 
                     <label for="date">Fecha:</label>
                     <input type="date" id="date" name="date" required>
 
+                    <label for="address">Dirección:</label>
+                    <input type="text" id="address" name="address" placeholder="Dirección" required>
+
                     <label for="people">Concepto:</label>
 
-                    <textarea name="" id="" cols="60" rows="20" style="resize: none; width: 100%; padding: 8px;"
+                    <textarea name="" id="" cols="60" rows="15" style="resize: none; width: 100%; padding: 8px;"
                         required></textarea>
 
                     <button id="reserva-btn" type="submit"> Enviar</button>
