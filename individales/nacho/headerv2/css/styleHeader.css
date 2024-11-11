@@ -1,0 +1,239 @@
+html,
+body {
+    height: 100%;
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #18576c; 
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+/*    background-image: url("../img/imgHeader/fondoheader.webp"); */
+    background-size: cover;   
+}
+
+.header-logo {
+    flex: 1;
+    text-align: left;
+}
+
+.header-logo img {
+    transition: filter 0.3s ease;
+    /* Transición suave para el hover */
+}
+
+.header-logo img:hover {
+    filter: drop-shadow(0px 0.5px 0.5px rgba(0, 0, 0, 2));
+    /* Sombra menos difuminada */
+}
+
+.header-menu {
+    display:flex;
+    flex-direction:column;
+    padding: 0.3rem;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+
+.header-menu ul {
+    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* Elimina el margen predeterminado del ul */
+    display: flex;
+    /* Usa flexbox para alinear los elementos horizontalmente */
+    justify-content: space-between;
+    /* Centra los elementos horizontalmente */
+
+}
+
+.header-menu ul li {
+    margin: 0 0.2rem;
+    /* Ajusta el espacio horizontal entre elementos */
+}
+
+.header-menu ul a {
+    color:white;
+/*    color: black; */
+    text-decoration: none;
+/*    border: 1px solid black; */
+    border-radius: 1rem;
+    padding: 0.4rem;
+    display: inline-block;
+    /* Asegura que el padding se aplique correctamente */
+    transition: all 0.3s ease;
+    /* Aplica una transición suave a todas las propiedades */
+}
+
+.header-menu ul a:hover {
+    color: white;
+    background-color: #217a94;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra difusa */
+    transition: box-shadow 0.3s ease; /* Transición suave */
+}
+
+.header-btn-contacto {
+    flex: 1;
+    text-align: right;
+}
+
+.header-btn-contacto a {
+    align-items: center;
+    background-color: #ffc857; /* Color principal del botón */
+    border-radius: 24px;
+    padding: 1rem;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.contenedor-button {
+    text-align: right;
+    display:flex;
+    align-items: right;
+    justify-content: right;
+}
+
+.contactButton {
+    margin-left: auto;
+    background: #7079f0;
+    color: white;
+    font-family: inherit;
+    padding: 0.45em;
+    padding-left: 1em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3em;
+  }
+  
+  .iconButton {
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #7a8cf3;
+    right: 0.3em;
+    transition: all 0.3s;
+  }
+  
+  .contactButton:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em #5566c2;
+  }
+  
+  .contactButton:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em #5566c2;
+  }
+  
+
+
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: #eaeaea;
+}
+
+
+/* Estilos del menú hamburguesa */
+.hamburguesa {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburguesa div {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 4px 0;
+}
+
+/* Estilos de la hamburguesa cuando está abierta */
+.hamburguesa.open div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburguesa.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguesa.open div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Transición para un cambio suave */
+.hamburguesa div {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+/* Oculta el menú en pantallas pequeñas */
+@media (max-width: 600px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .header-menu,
+    .header-btn-contacto {
+        display: none;
+    }
+
+    .hamburguesa {
+        display: block;
+        order: 2;
+        /* Mueve el hamburguesa al final */
+    }
+
+    /* Menú desplegable */
+
+.menu-desplegable {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    background-color: #f8f8f8;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999; /* Asegura que el menú esté en la capa superior */
+}
+
+    .menu-desplegable a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #000;
+        font-size: 1.2rem;
+    }
+
+    .menu-desplegable.show {
+        display: block;
+    }
+}
