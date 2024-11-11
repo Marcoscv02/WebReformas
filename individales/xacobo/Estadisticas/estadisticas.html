@@ -32,47 +32,100 @@
         </div>
     </div>
 
-    <div id="grafico-radial">
-
-        <div class='porcentajes' style="--porcentaje: 75; --color: forestgreen">
-            <svg width="150" height="150">
-                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-            </svg>
-            <span>75%</span>
+    <h2>Gráfico de Barras Animado</h2>
+    <div class="chart">
+        <div>
+            <div class="bar" id="bar1" style="height: 150px;">
+                <div class="label">Enero</div>
+            </div>
+            <div class="counter">0</div>
         </div>
-
-
-        <div class='porcentajes' style="--porcentaje: 75; --color: forestgreen">
-            <svg width="150" height="150">
-                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-            </svg>
-            <span>75%</span>
+        
+        <div>
+            <div class="bar" id="bar2" style="height: 200px;">
+                <div class="label">Febrero</div>
+            </div>
+            <div class="counter">0</div>
         </div>
-
-        <div class='porcentajes' style="--porcentaje: 75; --color: forestgreen">
-            <svg width="150" height="150">
-                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-            </svg>
-            <span>75%</span>
+        
+        <div>
+            <div class="bar" id="bar3" style="height: 100px;">
+                <div class="label">Marzo</div>
+            </div>
+            <div class="counter">0</div>
         </div>
-
-        <div class='porcentajes' style="--porcentaje: 75; --color: forestgreen">
-            <svg width="150" height="150">
-                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-            </svg>
-            <span>75%</span>
+        
+        <div>
+            <div class="bar" id="bar4" style="height: 175px;">
+                <div class="label">Abril</div>
+            </div>
+            <div class="counter" id="counter">0</div>
         </div>
+        
+        <div>
+            <div class="bar" id="bar5" style="height: 225px;">
+                <div class="label">Mayo</div>
+            </div>
+            <div class="counter">0</div>
+        </div>
+        
     </div>
+
+    <script>
+        // Función para animar el gráfico de barras
+        function animateBars() {
+            const bars = document.querySelectorAll('.bar');
+            bars.forEach(bar => {
+                bar.style.transform = "scaleY(1)"; // Escala cada barra a su tamaño original
+            });
+        }
+
+        // Ejecuta la animación cuando la página carga
+        window.onload = animateBars;
+    </script>
 
 </body>
 
 </html>
 
 <style>
+    
+
+    h2 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .chart {
+        display: flex;
+        gap: 100px;
+        align-items: flex-end;
+        margin-top: 20px;
+    }
+
+    .bar {
+        width: 100px;
+        background-color: #4CAF50;
+        border-radius: 5px 5px 0 0;
+        transform: scaleY(0);
+        /* Comienza en 0 (invisible) */
+        transform-origin: bottom;
+        /* Punto de origen en la base */
+        transition: transform 1s ease;
+        /* Transición suave */
+
+    }
+
+    /* Texto en la parte inferior de cada barra */
+    .label {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #333;
+    }
+
+
+
     body {
         font-family: Arial, sans-serif;
         background-color: #f5f5f5;
@@ -141,55 +194,37 @@
         font-size: 14px;
         color: #666;
     }
-
-
-
-
-
-
-    @keyframes rellenar {
-        to {
-            stroke-dasharray: var(--porcentaje) 100;
-        }
-    }
-
-
-    .porcentajes {
-        position: relative;
-    }
-
-    .porcentajes span {
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        bottom: 0%;
-        right: 0%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font: 25px/1em Verdana;
-    }
-
-    circle {
-        fill: none;
-        stroke-width: 20;
-        transform: rotate(-90deg);
-        transform-origin: 50%;
-        stroke-dasharray: 100 100;
-        stroke: #AAA;
-    }
-
-    circle:nth-child(2) {
-        /* el segundo círculo, es el que se ve por encima del anterior y debe tener el color mas intenso y el area del porcentaje */
-        stroke: var(--color);
-        stroke-dasharray: 0 100;
-        animation: rellenar 2s linear forwards;
-    }
-
-    #grafico-radial {
-        display: flex;
-        margin: 100px;
-        width: 50%;
-        justify-content: space-around;
-    }
 </style>
+
+<script>
+    
+function count(){
+
+    
+    $('.counter').each(function() {
+  var counter = { var: 0 };
+  var id = this.id;  // Obtener el ID del elemento actual
+
+  var count = TweenMax.to(counter, 3, {
+    var: 100, 
+    onUpdate: function () {
+      var number = Math.ceil(counter.var);
+      // Usamos getElementById para actualizar el contenido del elemento con su ID
+      document.getElementById(id).innerHTML = counter;
+    },
+    onComplete: function() {
+      // Si quieres que se ejecute algo al finalizar el conteo, lo puedes poner aquí
+    },    
+    ease: Circ.easeOut
+  });
+
+
+
+  count();
+});
+}
+</script>
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js'></script>
