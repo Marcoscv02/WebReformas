@@ -81,3 +81,15 @@
   background-color: #e3f3ff;
   border-radius: 5px;
 }
+
+/* Opiniones */
+
+.opiniones{
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+
+}
+.opinion{
+  
+}
