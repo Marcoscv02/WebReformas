@@ -6,76 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reformas Coruña 2021, S.L.</title>
 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js'></script>
 </head>
 
 <body>
+    <div id="estadisticas">
+        <h2>¿Por qué elegirnos?</h2>
+        <div class="contenedor">
+            <div id="carta-asesoramiento" class="carta">
+                <div class="icon">👥</div>
+                <div class="title">Asesoramiento personalizado</div>
+                <div class="description">Damos forma a tus ideas y cumplimos sueños en forma de reformas a través del
+                    asesoramiento personalizado de nuestros profesionales.</div>
+            </div>
+            <div id="carta-materiales" class="carta">
+                <div class="icon">🏅</div>
+                <div class="title">Materiales de calidad</div>
+                <div class="description">Logramos unos acabados impresionantes gracias al empleo de materiales de alta
+                    calidad a precios inigualables.</div>
+            </div>
+            <div id="carta-reformas" class="carta">
+                <div class="icon">🔧</div>
+                <div class="title">Reformas adaptadas</div>
+                <div class="description">Plasmamos y ejecutamos la reforma deseada para lograr un acabado de ensueño,
+                    que se
+                    adapte a lo que el cliente está buscando.</div>
+            </div>
+        </div>
 
-    <h2>¿Por qué elegir Reformas Coruña 2021, S.L.?</h2>
-    <div class="container">
-        <div id="card-asesoramiento" class="card">
-            <div class="icon">👥</div>
-            <div class="title">Asesoramiento personalizado</div>
-            <div class="description">Damos forma a tus ideas y cumplimos sueños en forma de reformas a través del
-                asesoramiento personalizado de nuestros profesionales.</div>
+        <h2>Número de reformas llevadas a cabo</h2>
+        <div class="grafico">
+            <div>
+                <div class="bar" id="bar1" style="height: 150px;">
+                    <div class="label">
+                        <div class="counter" id="setenove">0</div>
+                    </div>
+                </div>
+                <p>A Coruña</p>
+            </div>
+
+
+            <div>
+                <div class="bar" id="bar2" style="height: 200px;">
+                    <div class="label">
+                        <div class="counter" id="novedous">0</div>
+                    </div>
+                </div>
+                <p>Ferrol</p>
+            </div>
+
+            <div>
+                <div class="bar" id="bar3" style="height: 166px;">
+                    <div class="label">
+                        <div class="counter" id="oitotres">0</div>
+                    </div>
+                </div>
+                <p>Santiago de Compostela</p>
+            </div>
+
+
+            <div>
+                <div class="bar" id="bar4" style="height: 175px;">
+                    <div class="label">
+                        <div class="counter" id="oitocinco">0</div>
+                    </div>
+                </div>
+                <p>Betanzos</p>
+            </div>
+
+            <div>
+                <div class="bar" id="bar5" style="height: 225px;">
+                    <div class="label">
+                        <div class="counter" id="novesete">0</div>
+                    </div>
+                </div>
+                <p>Ordes</p>
+            </div>
+
         </div>
-        <div id="card-materiales" class="card">
-            <div class="icon">🏅</div>
-            <div class="title">Materiales de calidad</div>
-            <div class="description">Logramos unos acabados impresionantes gracias al empleo de materiales de alta
-                calidad a precios inigualables.</div>
-        </div>
-        <div id="card-reformas" class="card">
-            <div class="icon">🔧</div>
-            <div class="title">Reformas adaptadas</div>
-            <div class="description">Plasmamos y ejecutamos la reforma deseada para lograr un acabado de ensueño, que se
-                adapte a lo que el cliente está buscando.</div>
-        </div>
+
     </div>
 
-    <h2>Gráfico de Barras Animado</h2>
-    <div class="chart">
-        <div>
-            <div class="bar" id="bar1" style="height: 150px;">
-                <div class="label">Enero</div>
-            </div>
-            <div class="counter">0</div>
-        </div>
-        
-        <div>
-            <div class="bar" id="bar2" style="height: 200px;">
-                <div class="label">Febrero</div>
-            </div>
-            <div class="counter">0</div>
-        </div>
-        
-        <div>
-            <div class="bar" id="bar3" style="height: 100px;">
-                <div class="label">Marzo</div>
-            </div>
-            <div class="counter">0</div>
-        </div>
-        
-        <div>
-            <div class="bar" id="bar4" style="height: 175px;">
-                <div class="label">Abril</div>
-            </div>
-            <div class="counter" id="counter">0</div>
-        </div>
-        
-        <div>
-            <div class="bar" id="bar5" style="height: 225px;">
-                <div class="label">Mayo</div>
-            </div>
-            <div class="counter">0</div>
-        </div>
-        
-    </div>
 
     <script>
         // Función para animar el gráfico de barras
         function animateBars() {
             const bars = document.querySelectorAll('.bar');
             bars.forEach(bar => {
+                bar.style.transform = "scale(0)"
                 bar.style.transform = "scaleY(1)"; // Escala cada barra a su tamaño original
             });
         }
@@ -84,28 +103,83 @@
         window.onload = animateBars;
     </script>
 
+    <script>
+        function count(targetId, targetNumber) {
+            var counter = { var: 0 };
+            var targetElement = document.getElementById(targetId); // Selecciona el elemento por su ID
+
+            TweenMax.to(counter, 3, {
+                var: targetNumber, // Objetivo personalizado
+                onUpdate: function () {
+                    var number = Math.ceil(counter.var);
+                    if (targetElement) { // Asegura que el elemento existe
+                        targetElement.innerHTML = number; // Actualiza el contenido del elemento
+                    }
+                },
+                ease: Circ.easeOut
+            });
+        }
+
+        // Llamadas a la función con condiciones para cada ID
+        if (document.getElementById("novesete")) {
+            count("novesete", 97); // Elemento con id="hola" sube hasta 100
+        }
+
+        if (document.getElementById("novedous")) {
+            count("novedous", 92); // Elemento con id="adios" sube hasta 50
+        }
+        if (document.getElementById("oitocinco")) {
+            count("oitocinco", 85); // Elemento con id="adios" sube hasta 50
+        }
+        if (document.getElementById("oitotres")) {
+            count("oitotres", 83); // Elemento con id="adios" sube hasta 50
+        }
+        if (document.getElementById("setenove")) {
+            count("setenove", 79); // Elemento con id="adios" sube hasta 50
+        }
+    </script>
+
+
 </body>
 
 </html>
 
 <style>
-    
+    #estadisticas {
+        padding: 100px;
+        background-color: #fff;
+    }
 
     h2 {
         color: #333;
         margin-bottom: 20px;
+        text-align: center;
     }
 
-    .chart {
+    .grafico p {
+        width: 100px;
+        text-align: center;
+        height: 20px;
+    }
+
+    .counter {
+        font-size: x-large;
+        font-weight: bold;
+        color: #fff;
+
+    }
+
+    .grafico {
         display: flex;
         gap: 100px;
         align-items: flex-end;
+        justify-content: center;
         margin-top: 20px;
     }
 
     .bar {
         width: 100px;
-        background-color: #4CAF50;
+        background-color: #ADD8E6;
         border-radius: 5px 5px 0 0;
         transform: scaleY(0);
         /* Comienza en 0 (invisible) */
@@ -141,7 +215,7 @@
         font-weight: 400;
     }
 
-    .container {
+    .contenedor {
         display: flex;
         justify-content: center;
         gap: 20px;
@@ -149,7 +223,7 @@
     }
 
     /* Estilos generales para tarjetas */
-    .card {
+    .carta {
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -171,15 +245,15 @@
     }
 
     /* Estilos específicos para cada tarjeta */
-    #card-asesoramiento .icon {
+    #carta-asesoramiento .icon {
         background-color: #9aa3a9;
     }
 
-    #card-materiales .icon {
+    #carta-materiales .icon {
         background-color: #9aa3a9;
     }
 
-    #card-reformas .icon {
+    #carta-reformas .icon {
         background-color: #9aa3a9;
     }
 
@@ -195,36 +269,3 @@
         color: #666;
     }
 </style>
-
-<script>
-    
-function count(){
-
-    
-    $('.counter').each(function() {
-  var counter = { var: 0 };
-  var id = this.id;  // Obtener el ID del elemento actual
-
-  var count = TweenMax.to(counter, 3, {
-    var: 100, 
-    onUpdate: function () {
-      var number = Math.ceil(counter.var);
-      // Usamos getElementById para actualizar el contenido del elemento con su ID
-      document.getElementById(id).innerHTML = counter;
-    },
-    onComplete: function() {
-      // Si quieres que se ejecute algo al finalizar el conteo, lo puedes poner aquí
-    },    
-    ease: Circ.easeOut
-  });
-
-
-
-  count();
-});
-}
-</script>
-
-
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js'></script>
