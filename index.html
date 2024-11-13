@@ -69,15 +69,21 @@
                     <label for="date">Fecha:</label>
                     <input type="date" id="date" name="date" required>
 
-                    <label for="address">Dirección:</label>
-                    <input type="text" id="address" name="address" placeholder="Dirección" required>
+                    <label for="address">Correo electrónico:</label>
+                    <input type="email" id="address" name="address" placeholder="tucorreo@gmail.com" required>
 
                     <label for="people">Concepto:</label>
 
                     <textarea name="" id="" cols="60" rows="15" style="resize: none; width: 100%; padding: 8px;"
                         required></textarea>
 
-                    <button id="reserva-btn" type="submit"> Enviar</button>
+                    <div id="reserva_privacidad">
+                        <button id="reserva-btn" type="submit"> Enviar</button>
+                        <div id="privacidad">
+                            <input type="checkbox" name="privacidadCheck" id="privacidadCheck" required>
+                            <label for="privacidadCheck">Aceptar la política de privacidad</label>
+                        </div>
+                    </div>
                 </form>
             </div>
 
@@ -100,7 +106,7 @@
 
                 <div class="contact-item">
                     <div>
-                        <i class="fa-whatsapp"></i>
+                        <i><img src="img/imgContactos/2071331.svg" alt="" srcset=""></i>
                         <p><strong>Whatsapp</strong><br>082-245-7253</p>
                     </div>
                     <div>

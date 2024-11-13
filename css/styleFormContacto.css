@@ -2,6 +2,35 @@ body {
   position: relative;
 }
 
+#reserva_privacidad{
+  display: flex;
+  align-items: center;
+  
+}
+
+#reserva_privacidad label{
+  font-size: small;
+  margin: 0px;
+  margin-left: 10px;
+}
+
+#privacidad{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 58px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#privacidadCheck{
+  margin: 0px;
+}
+
+#privacidad input{
+  width: fit-content;
+}
+
 .modalGrande {
   display: none;
   /* Inicialmente oculto */
@@ -180,9 +209,12 @@ hr {
   content: "✉";
 }
 
-.fa-whatsapp::before {
-  content: "📱";
+i img{
+  width: 40px;
+  padding-bottom: 10px;
+  margin: 0px;
 }
+
 
 .fa-map-marker-alt::before {
   content: "✈";
