@@ -83,3 +83,40 @@
   background-color: none;
   border: none;
 }
+
+/* Opiniones */
+
+#containerOpiniones .carousel-indicators button {
+  background-color: rgb(53, 84, 141);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.opiniones {
+  display: flex !important;
+  flex-flow: row nowrap;
+  text-align: left;
+  padding: 5%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.opinion {
+  padding: 2%;
+}
+.dejar-opinion {
+  text-align: center;
+}
+.boton-opinion {
+  background-color: transparent;
+  outline: none;
+  border: 2px solid rgb(53, 84, 141);
+  color: rgb(0, 13, 85);
+  padding: 10px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+.boton-opinion:hover {
+  background-color: rgb(76, 119, 201);
+  color: white;
+  transition: 0.3s ease-in-out;
+}
