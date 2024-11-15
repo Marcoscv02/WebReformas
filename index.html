@@ -661,6 +661,19 @@
 </html>
 
 <script>
+      // Seleccionar el logo
+      const logo = document.querySelector('.header-logo img');
+// Cambiar la imagen en hover
+logo.addEventListener('mouseenter', () => {
+    logo.src = 'img/imgHeader/logo-transparencia-recortado-amarillo.png';
+});
+// Volver a la imagen original al quitar el hover
+logo.addEventListener('mouseleave', () => {
+    logo.src = 'img/imgHeader/logo-transparencia-recortado.png';
+});
+</script>
+
+<script>
   function toggleMenu() {
     const menu = document.getElementById("menuDesplegable");
     const hamburguesa = document.querySelector(".hamburguesa");
@@ -707,6 +720,9 @@
 </script>
 
 <script>
+
+
+
   function count(targetId, targetNumber) {
     var counter = { var: 0 };
     var targetElement = document.getElementById(targetId); // Selecciona el elemento por su ID
