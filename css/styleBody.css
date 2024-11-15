@@ -85,7 +85,10 @@
 }
 
 /* Opiniones */
-
+#containerOpiniones{
+  background-color: white;
+  padding: 5%;
+}
 #containerOpiniones .carousel-indicators button {
   background-color: rgb(53, 84, 141);
   width: 10px;
