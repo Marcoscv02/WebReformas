@@ -1,0 +1,30 @@
+.contenedor-resenas {
+    display: flex;
+    flex-direction: column; /* Apila los divs verticalmente */
+    align-items: center; /* Centra horizontalmente los hijos */
+    margin: 0 auto; /* Asegura márgenes automáticos */
+}
+
+.contenedor-resena {
+    background-color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+    max-width: 60rem;
+  }
+  
+  .contenedor-resena:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+
+.titulo-resenas {
+    text-align:center;
+}
+
+.estrellas-resenas {
+    text-align:center;
+    padding: 0.2rem 0rem 0.4rem 0rem;
+}

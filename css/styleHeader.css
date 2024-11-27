@@ -85,6 +85,7 @@ header {
 }
 
 .header-btn-contacto {
+    margin-right:0.8rem;
     flex: 1;
     text-align: right;
 }

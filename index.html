@@ -23,7 +23,7 @@
   <!-- HEADER -->
 
   <header>
-    <div class="header-logo"><a href="#"><img src="img/imgHeader/logo-transparencia-recortado.png" height="80px"></a>
+    <div class="header-logo"><a href="index.html"><img src="img/imgHeader/logo-transparencia-recortado.png" height="80px"></a>
     </div>
 
     <div class="hamburguesa" onclick="toggleMenu()">
@@ -33,13 +33,13 @@
     </div>
 
     <div class="header-menu">
-      <div class="header-menu-nombre"><img src="img/imgHeader/homeserve.png" height="50"></div>
+      <div class="header-menu-nombre"><a href="index.html"><img src="img/imgHeader/homeserve.png" height="50"></a></div>
       <div class="header-menu-menu">
         <ul>
-          <li><a href="#">Electricidad</a></li>
-          <li><a href="#">Fontanería</a></li>
-          <li><a href="#">Gas</a></li>
-          <li><a href="#">Domótica</a></li>
+          <li><a href="electricidad.html">Electricidad</a></li>
+          <li><a href="fontaneria.html">Fontanería</a></li>
+          <li><a href="gas.html">Gas</a></li>
+          <li><a href="domotica.html">Domótica</a></li>
         </ul>
       </div>
     </div>
@@ -68,10 +68,10 @@
       <span></span>
     </div>
     <div class="menu-desplegable" id="menuDesplegable">
-      <a href="#home">Electricidad</a>
-      <a href="#productos">Fontanería</a>
-      <a href="#historia">Gas</a>
-      <a href="#historia">Domótica</a>
+      <a href="electricidad.html">Electricidad</a>
+      <a href="fontaneria.html">Fontanería</a>
+      <a href="gas.html">Gas</a>
+      <a href="domotica.html">Domótica</a>
       <a href="#" onclick="openModal()">Contacto</a>
     </div>
 
@@ -221,6 +221,99 @@
       </div>
     </div>
 
+    <!-- Opiniones -->
+
+    <div class="container mt-5" id="containerOpiniones">
+      <div id="carouselOpiniones" class="carousel slide w-100 m-5 mt-3 mx-auto" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselOpiniones" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselOpiniones" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselOpiniones" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <!-- PRIMERO -->
+          <div class="carousel-item active">
+            <div class="opiniones">
+              <div class="opinion">
+                <h1>Laura González</h1>
+                <p><img src="/img/estrellas.png" width="150"></p>
+                <hr />
+                <p>
+                  "Contratamos sus servicios para renovar el baño y estamos encantados con el resultado. Trabajo impecable, limpio y siempre dentro de los plazos. ¡Totalmente recomendados!"
+                </p>
+              </div>
+              <div class="opinion">
+                <h1>Carlos Méndez</h1>
+                <p><img src="/img/estrellas.png" width="150"></p>
+                <hr />
+                <p>
+                  "Hicieron una reforma integral en nuestro piso. Desde el diseño hasta la ejecución, todo fue profesional y ajustado a nuestras necesidades. Un equipo que inspira confianza."
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- SEGUNDO -->
+          <div class="carousel-item">
+            <div class="opiniones">
+              <div class="opinion">
+                <h1>Ana Torres</h1>
+                <p><img src="/img/estrellas.png" width="150"></p>
+                <hr />
+                <p>
+                  "Reformaron mi cocina y ha quedado espectacular. Detallistas, rápidos y muy amables en todo momento. Sin duda, la mejor decisión que pude tomar."
+                </p>
+
+              </div>
+              <div class="opinion">
+                <h1>Javier Romero</h1>
+                <p><img src="/img/estrellas.png" width="150"></p>
+                <hr />
+                <p>
+                  "Necesitábamos renovar la fachada de nuestra casa. Superaron nuestras expectativas tanto en calidad como en atención al cliente. ¡No puedo estar más feliz con el resultado!"
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- TERCERO -->
+          <div class="carousel-item">
+            <div class="opiniones">
+              <div class="opinion">
+                <h1>Marta Fernández</h1>
+                <p><img src="/img/estrellas.png" width="150"></p>
+                <hr />
+                <p>
+                  "El equipo transformó nuestro jardín en un espacio moderno y acogedor. Muy puntuales, organizados y con un trato excelente. ¡Los recomiendo a todos mis amigos!"
+                </p>
+              </div>
+              <div class="opinion">
+                <h1>Pedro Morales</h1>
+                <p><img src="/img/estrellas.png" width="150"></p>
+                <hr />
+                <p>
+                  "Una experiencia excelente. Reformaron nuestra oficina y el resultado fue increíble. Crearon un espacio funcional y elegante. Sin duda, volveremos a trabajar con ellos."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselOpiniones" data-bs-slide="prev"
+          style="display: flex; justify-content: start;">
+          <img src="img/imgCarrusel/flecha.png" alt="" style="height: 50px; rotate: 180deg; margin-bottom: 100px;">
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselOpiniones" data-bs-slide="next"
+          style="display: flex; justify-content: end;">
+          <img src="img/imgCarrusel/flecha.png" alt="" style="height: 50px; margin-bottom: 100px;">
+        </button>
+      </div>
+      <div class="dejar-opinion">
+        <h3 style="text-align: center">
+          ¡Ahora es tu turno! Cuéntanos como ha sido tu experiencia con nosotros
+        </h3>
+        <button class="boton-opinion"><a href="resenas.html">Ver todas las reseñas</a></button>
+      </div>
+    </div>
+<br>
     <!-- SECCION PREGUNTAS -->
     <div class="container w-100 preguntas">
       <h1 class="text-center">Preguntas Frecuentes</h1>
@@ -472,117 +565,6 @@
       }
     </script>
 
-    <!-- Opiniones -->
-    <div class="container mt-5" id="containerOpiniones">
-      <div id="carouselOpiniones" class="carousel slide w-100 m-5 mt-3 mx-auto" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselOpiniones" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselOpiniones" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselOpiniones" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <!-- PRIMERO -->
-          <div class="carousel-item active">
-            <div class="opiniones">
-              <div class="opinion">
-                <h1>Pablo Alfonso Cornes</h1>
-                <hr />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                  minus fugiat iure temporibus error earum qui blanditiis. Dicta
-                  in cupiditate enim! Autem doloremque facere voluptates
-                  officiis commodi quasi rem rerum!
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                  minus fugiat iure temporibus error
-                </p>
-              </div>
-              <div class="opinion">
-                <h1>Félix Conde Iglesias</h1>
-                <hr />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ipsum, molestiae illo? Debitis fugiat quam corporis quod animi
-                  quibusdam in nisi minima pariatur aspernatur accusamus non
-                  dolorum, unde necessitatibus, aut praesentium.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- SEGUNDO -->
-          <div class="carousel-item">
-            <div class="opiniones">
-              <div class="opinion">
-                <h1>Pablo Alfonso Cornes</h1>
-                <hr />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                  minus fugiat iure temporibus error earum qui blanditiis. Dicta
-                  in cupiditate enim! Autem doloremque facere voluptates
-                  officiis commodi quasi rem rerum!
-                </p>
-
-              </div>
-              <div class="opinion">
-                <h1>Félix Conde Iglesias</h1>
-                <hr />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ipsum, molestiae illo? Debitis fugiat quam corporis quod animi
-                  quibusdam in nisi minima pariatur aspernatur accusamus non
-                  dolorum, unde necessitatibus, aut praesentium.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                  minus fugiat iure temporibus error
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- TERCERO -->
-          <div class="carousel-item">
-            <div class="opiniones">
-              <div class="opinion">
-                <h1>Pablo Alfonso Cornes</h1>
-                <hr />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                  minus fugiat iure temporibus error earum qui blanditiis. Dicta
-                  in cupiditate enim! Autem doloremque facere voluptates
-                  officiis commodi quasi rem rerum!
-                </p>
-              </div>
-              <div class="opinion">
-                <h1>Félix Conde Iglesias</h1>
-                <hr />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ipsum, molestiae illo? Debitis fugiat quam corporis quod animi
-                  quibusdam in nisi minima pariatur aspernatur accusamus non
-                  dolorum, unde necessitatibus, aut praesentium.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselOpiniones" data-bs-slide="prev"
-          style="display: flex; justify-content: start;">
-          <img src="img/imgCarrusel/flecha.png" alt="" style="height: 50px; rotate: 180deg; margin-bottom: 100px;">
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselOpiniones" data-bs-slide="next"
-          style="display: flex; justify-content: end;">
-          <img src="img/imgCarrusel/flecha.png" alt="" style="height: 50px; margin-bottom: 100px;">
-        </button>
-      </div>
-      <div class="dejar-opinion">
-        <h3 style="text-align: center">
-          ¡Ahora es tu turno! Cuéntanos como ha sido tu experiencia con nosotros
-        </h3>
-        <button class="boton-opinion">¡Déjanos tu opinión!</button>
-      </div>
-    </div>
 
   </main>
 
