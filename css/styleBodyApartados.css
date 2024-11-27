@@ -1,0 +1,195 @@
+/* Carousel */
+.carousel-item {
+  height: 400px;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+  color: rgb(0, 6, 65);
+}
+
+.carousel-item:hover .carousel-caption {
+  opacity: 1;
+  visibility: visible;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.carousel-item:hover {
+  cursor: pointer;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  transform: scale(1.1);
+}
+
+/* Accordion */
+
+.accordion {
+  --bs-accordion-active-bg: #ffffff;
+  --bs-accordion-active-color: #000000;
+  --bs-accordion-btn-focus-box-shadow: none;
+}
+
+.accordion .accordion-item:has(.accordion-button:not(.collapsed)) {
+  border: 1px solid black;
+  box-shadow: 4px 4px #000000;
+}
+
+.accordion-button.collapsed {
+  border: 1px solid #d8d8d8;
+}
+
+.accordion-button:not(.collapsed) {
+  box-shadow: none !important;
+}
+
+.accordion-button {
+  --bs-accordion-active-bg: white;
+}
+
+.accordion-collapse {
+  transition: all 0.3s;
+}
+
+.accordion-button:focus {
+  outline: none;
+  box-shadow: none !important;
+  /* border: 1px solid #d8d8d8; */
+}
+
+.accordion-body {
+  background-color: #e3f3ff;
+  border-radius: 5px;
+}
+
+.accordion .accordion-item {
+  background-color: none;
+  border: none;
+}
+
+/* Opiniones */
+#containerOpiniones {
+  background-color: white;
+  padding: 5%;
+}
+
+#containerOpiniones .carousel-indicators button {
+  background-color: rgb(53, 84, 141);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.opiniones {
+  display: flex !important;
+  flex-flow: row nowrap;
+  text-align: left;
+  padding: 5%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.opinion {
+  padding: 2%;
+}
+
+.dejar-opinion {
+  text-align: center;
+}
+
+.boton-opinion {
+  background-color: transparent;
+  outline: none;
+  border: 2px solid rgb(53, 84, 141);
+  color: rgb(0, 13, 85);
+  padding: 10px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.boton-opinion:hover {
+  background-color: rgb(76, 119, 201);
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+
+#carrusel {
+  margin: 0;
+}
+
+#mainTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 10%;
+}
+
+#textoPagina{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  align-self: center;
+  width: 30%;
+}
+
+#textoPagina h1{
+  font-size: 80px;
+}
+
+#textoPagina p{
+  width: 100%;
+}
+
+
+#imagen img{
+  margin-top: 3%;
+  width: 70%;
+  object-fit: cover;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+@media (max-width: 1200px) {
+  #mainTop {
+    flex-direction: column;
+    margin: 0;
+  }
+  #textoPagina{
+    width: 100%;
+    align-items: center;
+  }
+  
+  #textoPagina p{
+    width: 60%;
+    text-align: start;
+    margin-top: 5%;
+  }
+
+  #imagen{
+    height: 50%;
+  }
+}
+
