@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reformas Coruña 2021, S.L.</title>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js'></script>
+</head>
+
+<body>
+    <div id="estadisticas">
+        <h2>¿Por qué elegirnos?</h2>
+        <div class="contenedor">
+            <div id="carta-asesoramiento" class="carta">
+                <div class="icon">👥</div>
+                <div class="title">Asesoramiento personalizado</div>
+                <div class="description">Damos forma a tus ideas y cumplimos sueños en forma de reformas a través del
+                    asesoramiento personalizado de nuestros profesionales.</div>
+            </div>
+            <div id="carta-materiales" class="carta">
+                <div class="icon">🏅</div>
+                <div class="title">Materiales de calidad</div>
+                <div class="description">Logramos unos acabados impresionantes gracias al empleo de materiales de alta
+                    calidad a precios inigualables.</div>
+            </div>
+            <div id="carta-reformas" class="carta">
+                <div class="icon">🔧</div>
+                <div class="title">Reformas adaptadas</div>
+                <div class="description">Plasmamos y ejecutamos la reforma deseada para lograr un acabado de ensueño,
+                    que se
+                    adapte a lo que el cliente está buscando.</div>
+            </div>
+        </div>
+
+        <h2>Número de reformas llevadas a cabo</h2>
+        <div class="grafico">
+            <div>
+                <div class="bar" id="bar1" style="height: 150px;">
+                    <div class="label">
+                        <div class="counter" id="setenove">0</div>
+                    </div>
+                </div>
+                <p>A Coruña</p>
+            </div>
+
+
+            <div>
+                <div class="bar" id="bar2" style="height: 200px;">
+                    <div class="label">
+                        <div class="counter" id="novedous">0</div>
+                    </div>
+                </div>
+                <p>Ferrol</p>
+            </div>
+
+            <div>
+                <div class="bar" id="bar3" style="height: 166px;">
+                    <div class="label">
+                        <div class="counter" id="oitotres">0</div>
+                    </div>
+                </div>
+                <p>Santiago de Compostela</p>
+            </div>
+
+
+            <div>
+                <div class="bar" id="bar4" style="height: 175px;">
+                    <div class="label">
+                        <div class="counter" id="oitocinco">0</div>
+                    </div>
+                </div>
+                <p>Betanzos</p>
+            </div>
+
+            <div>
+                <div class="bar" id="bar5" style="height: 225px;">
+                    <div class="label">
+                        <div class="counter" id="novesete">0</div>
+                    </div>
+                </div>
+                <p>Ordes</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        // Función para animar el gráfico de barras
+        function animateBars() {
+            const bars = document.querySelectorAll('.bar');
+            bars.forEach(bar => {
+                bar.style.transform = "scale(0)"
+                bar.style.transform = "scaleY(1)"; // Escala cada barra a su tamaño original
+            });
+        }
+
+        // Ejecuta la animación cuando la página carga
+        window.onload = animateBars;
+    </script>
+
+    <script>
+        function count(targetId, targetNumber) {
+            var counter = { var: 0 };
+            var targetElement = document.getElementById(targetId); // Selecciona el elemento por su ID
+
+            TweenMax.to(counter, 3, {
+                var: targetNumber, // Objetivo personalizado
+                onUpdate: function () {
+                    var number = Math.ceil(counter.var);
+                    if (targetElement) { // Asegura que el elemento existe
+                        targetElement.innerHTML = number; // Actualiza el contenido del elemento
+                    }
+                },
+                ease: Circ.easeOut
+            });
+        }
+
+        // Llamadas a la función con condiciones para cada ID
+        if (document.getElementById("novesete")) {
+            count("novesete", 97); // Elemento con id="hola" sube hasta 100
+        }
+
+        if (document.getElementById("novedous")) {
+            count("novedous", 92); // Elemento con id="adios" sube hasta 50
+        }
+        if (document.getElementById("oitocinco")) {
+            count("oitocinco", 85); // Elemento con id="adios" sube hasta 50
+        }
+        if (document.getElementById("oitotres")) {
+            count("oitotres", 83); // Elemento con id="adios" sube hasta 50
+        }
+        if (document.getElementById("setenove")) {
+            count("setenove", 79); // Elemento con id="adios" sube hasta 50
+        }
+    </script>
+
+
+</body>
+
+</html>
+
+<style>
+    #estadisticas {
+        padding: 100px;
+        background-color: #fff;
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .grafico p {
+        width: 100px;
+        text-align: center;
+        height: 20px;
+    }
+
+    .counter {
+        font-size: x-large;
+        font-weight: bold;
+        color: #fff;
+
+    }
+
+    .grafico {
+        display: flex;
+        gap: 100px;
+        align-items: flex-end;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .bar {
+        width: 100px;
+        background-color: #ADD8E6;
+        border-radius: 5px 5px 0 0;
+        transform: scaleY(0);
+        /* Comienza en 0 (invisible) */
+        transform-origin: bottom;
+        /* Punto de origen en la base */
+        transition: transform 1s ease;
+        /* Transición suave */
+
+    }
+
+    /* Texto en la parte inferior de cada barra */
+    .label {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #333;
+    }
+
+
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    h2 {
+        color: #9aa3a9;
+        font-weight: 400;
+    }
+
+    .contenedor {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    /* Estilos generales para tarjetas */
+    .carta {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+    }
+
+    .icon {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px auto;
+        font-size: 24px;
+        color: white;
+    }
+
+    /* Estilos específicos para cada tarjeta */
+    #carta-asesoramiento .icon {
+        background-color: #9aa3a9;
+    }
+
+    #carta-materiales .icon {
+        background-color: #9aa3a9;
+    }
+
+    #carta-reformas .icon {
+        background-color: #9aa3a9;
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #666;
+    }
+</style>

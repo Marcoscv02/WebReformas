@@ -1,0 +1,2 @@
+- Meter Apartado de email
+-Meter chekbox para aceptar política de privacidad
