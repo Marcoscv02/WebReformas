@@ -34,7 +34,8 @@
         </div>
 
         <div class="header-menu">
-            <div class="header-menu-nombre"><a href="index.html"><img src="img/imgHeader/homeserve.png" height="50"></a></div>
+            <div class="header-menu-nombre"><a href="index.html"><img src="img/imgHeader/homeserve.png" height="50"></a>
+            </div>
             <div class="header-menu-menu">
                 <ul>
                     <li><a href="./electricidad.html">Electricidad</a></li>
@@ -160,8 +161,14 @@
         <div id="mainTop">
             <div id="textoPagina">
                 <h1>Fontanería</h1>
-                <p>Ofrecemos instalación, mantenimiento y reparación de sistemas de fontanería para hogares y negocios, asegurando una distribución de agua eficiente y sin problemas. Realizamos la instalación de tuberías, grifos, sanitarios y otros elementos de fontanería, adaptándonos a las necesidades específicas de cada cliente.</p>
-                <p>Nuestro equipo se encarga de las revisiones periódicas y las reparaciones rápidas, solucionando cualquier avería para garantizar un funcionamiento óptimo y libre de fugas. También gestionamos la reparación de calentadores y sistemas de calefacción de agua, para mantener tu hogar o empresa en las mejores condiciones.</p>
+                <p>Ofrecemos instalación, mantenimiento y reparación de sistemas de fontanería para hogares y negocios,
+                    asegurando una distribución de agua eficiente y sin problemas. Realizamos la instalación de
+                    tuberías, grifos, sanitarios y otros elementos de fontanería, adaptándonos a las necesidades
+                    específicas de cada cliente.</p>
+                <p>Nuestro equipo se encarga de las revisiones periódicas y las reparaciones rápidas, solucionando
+                    cualquier avería para garantizar un funcionamiento óptimo y libre de fugas. También gestionamos la
+                    reparación de calentadores y sistemas de calefacción de agua, para mantener tu hogar o empresa en
+                    las mejores condiciones.</p>
             </div>
 
             <div id="carrusel" class="container d-flex justify-center align-center w-50">
@@ -289,18 +296,50 @@
                         </tr>
                     </tbody>
                 </table>
-                
+
             </div>
-        </div>
-        
-        <div id="imagen">
-            <div id="imagen-texto">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque distinctio iusto nemo aliquam expedita libero, dolorem saepe?</p>
-                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius itaque corporis ullam inventore aut ipsum at reprehenderit expedita nihil illum suscipit natus quam odio sit</p>
-            </div>
-            <img  src="img/imgCarrusel/fontaneriaCarousel.jpg" alt="">
         </div>
 
+        <div id="imagen">
+            <div id="imagen-texto">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque distinctio iusto nemo aliquam
+                    expedita libero, dolorem saepe?</p>
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius itaque corporis ullam inventore aut
+                    ipsum at reprehenderit expedita nihil illum suscipit natus quam odio sit</p>
+            </div>
+            <img src="img/imgCarrusel/fontaneriaCarousel.jpg" alt="">
+        </div>
+        <!-- CHAT -->
+        <!-- Botón de Chat -->
+        <div id="chat-button" onclick="toggleChat()">
+            <img src="img/imgBtnChat/btnChat.png" alt="Chat Icon" />
+        </div>
+
+        <!-- Ventana de Chat -->
+        <div id="chat-popup" style="display: none;">
+            <div class="chat-header">
+                <span>Homeserve</span>
+                <span>Horario: 8:00 a 16:00 h.</span>
+                <button onclick="toggleChat()">X</button>
+            </div>
+            <div class="chat-body">
+                <p>Hola!<br />¿En qué podemos ayudarte?</p>
+                <span class="chat-time">9:46</span>
+            </div>
+            <div class="chat-actions">
+                <button class="chat-btn chat-start">Empezar chat</button>
+                <button class="chat-btn chat-reserve">Reservar cita</button>
+            </div>
+        </div>
+
+        <script>
+            function toggleChat() {
+                const chatPopup = document.getElementById("chat-popup");
+                // Usa getComputedStyle para obtener el estilo actual del elemento
+                const isHidden = window.getComputedStyle(chatPopup).display === "none";
+                chatPopup.style.display = isHidden ? "block" : "none";
+            }
+        </script>
     </main>
 
     <!-- FOOTER -->

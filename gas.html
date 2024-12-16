@@ -298,6 +298,38 @@
             <img  src="img/imgGas/instalador-de-gas.webp" alt="Instalador de gas">
         </div>
 
+        <!-- CHAT -->
+<!-- Botón de Chat -->
+<div id="chat-button" onclick="toggleChat()">
+    <img src="img/imgBtnChat/btnChat.png" alt="Chat Icon" />
+  </div>
+  
+  <!-- Ventana de Chat -->
+  <div id="chat-popup" style="display: none;">
+    <div class="chat-header">
+      <span>Homeserve</span>
+      <span>Horario: 8:00 a 16:00 h.</span>
+      <button onclick="toggleChat()">X</button>
+    </div>
+    <div class="chat-body">
+      <p>Hola!<br />¿En qué podemos ayudarte?</p>
+      <span class="chat-time">9:46</span>
+    </div>
+    <div class="chat-actions">
+      <button class="chat-btn chat-start">Empezar chat</button>
+      <button class="chat-btn chat-reserve">Reservar cita</button>
+    </div>
+  </div>
+  
+  <script>
+    function toggleChat() {
+      const chatPopup = document.getElementById("chat-popup");
+      // Usa getComputedStyle para obtener el estilo actual del elemento
+      const isHidden = window.getComputedStyle(chatPopup).display === "none";
+      chatPopup.style.display = isHidden ? "block" : "none";
+    }
+  </script>
+
     </main>
 
     <!-- FOOTER -->

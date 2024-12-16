@@ -34,7 +34,8 @@
         </div>
 
         <div class="header-menu">
-            <div class="header-menu-nombre"><a href="index.html"><img src="img/imgHeader/homeserve.png" height="50"></a></div>
+            <div class="header-menu-nombre"><a href="index.html"><img src="img/imgHeader/homeserve.png" height="50"></a>
+            </div>
             <div class="header-menu-menu">
                 <ul>
                     <li><a href="./electricidad.html">Electricidad</a></li>
@@ -160,8 +161,10 @@
         <div id="mainTop">
             <div id="textoPagina">
                 <h1>Domótica</h1>
-                <p>Nuestro equipo se encarga de las actualizaciones y revisiones periódicas, asegurando que tus sistemas de domótica funcionen a la perfección y cumplan con los estándares de calidad. </p>
-                <p>También nos ocupamos de las reparaciones urgentes, solucionando cualquier problema para mantener el rendimiento y la comodidad de tu hogar o empresa.</p>
+                <p>Nuestro equipo se encarga de las actualizaciones y revisiones periódicas, asegurando que tus sistemas
+                    de domótica funcionen a la perfección y cumplan con los estándares de calidad. </p>
+                <p>También nos ocupamos de las reparaciones urgentes, solucionando cualquier problema para mantener el
+                    rendimiento y la comodidad de tu hogar o empresa.</p>
             </div>
 
             <div id="carrusel" class="container d-flex justify-center align-center w-50">
@@ -289,18 +292,50 @@
                         </tr>
                     </tbody>
                 </table>
-                
+
             </div>
-        </div>
-        
-        <div id="imagen">
-            <div id="imagen-texto">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque distinctio iusto nemo aliquam expedita libero, dolorem saepe?</p>
-                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius itaque corporis ullam inventore aut ipsum at reprehenderit expedita nihil illum suscipit natus quam odio sit</p>
-            </div>
-            <img  src="img/imgCarrusel/domoticaCarousel.jpg" alt="">
         </div>
 
+        <div id="imagen">
+            <div id="imagen-texto">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque distinctio iusto nemo aliquam
+                    expedita libero, dolorem saepe?</p>
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius itaque corporis ullam inventore aut
+                    ipsum at reprehenderit expedita nihil illum suscipit natus quam odio sit</p>
+            </div>
+            <img src="img/imgCarrusel/domoticaCarousel.jpg" alt="">
+        </div>
+        <!-- CHAT -->
+        <!-- Botón de Chat -->
+        <div id="chat-button" onclick="toggleChat()">
+            <img src="img/imgBtnChat/btnChat.png" alt="Chat Icon" />
+        </div>
+
+        <!-- Ventana de Chat -->
+        <div id="chat-popup" style="display: none;">
+            <div class="chat-header">
+                <span>Homeserve</span>
+                <span>Horario: 8:00 a 16:00 h.</span>
+                <button onclick="toggleChat()">X</button>
+            </div>
+            <div class="chat-body">
+                <p>Hola!<br />¿En qué podemos ayudarte?</p>
+                <span class="chat-time">9:46</span>
+            </div>
+            <div class="chat-actions">
+                <button class="chat-btn chat-start">Empezar chat</button>
+                <button class="chat-btn chat-reserve">Reservar cita</button>
+            </div>
+        </div>
+
+        <script>
+            function toggleChat() {
+                const chatPopup = document.getElementById("chat-popup");
+                // Usa getComputedStyle para obtener el estilo actual del elemento
+                const isHidden = window.getComputedStyle(chatPopup).display === "none";
+                chatPopup.style.display = isHidden ? "block" : "none";
+            }
+        </script>
     </main>
 
     <!-- FOOTER -->
